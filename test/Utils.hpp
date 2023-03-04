@@ -18,7 +18,8 @@ string GetFocused()
     // Get the process name
     char processName[MAX_PATH];
     if (GetModuleBaseNameA(processHandle, NULL, processName, MAX_PATH) == 0)
-    {
+    { 
+        // thing cus eac makes it so i cant access the proc so if its null i assume its vrc
         std::cout << "Tabbed Into: VRChat.exe" << std::endl;
         return "VRChat.exe";
     }
